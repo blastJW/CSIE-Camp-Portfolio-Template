@@ -1,4 +1,5 @@
 <script setup>
+import { random_text } from "@/utils";
 import { ref } from "vue";
 import MdiGithub from "~icons/mdi/github";
 import MdiInstagram from "~icons/mdi/instagram";
@@ -11,14 +12,14 @@ const step = ref(0);
         <Typing
             v-if="step >= 0"
             @done="step++"
-            text="My Portfolio"
+            text="My name is Johnson"
             class="mb-2 block text-2xl sm:text-3xl lg:text-4xl"
         />
-        <Typing v-if="step >= 1" @done="step++" text="Hello!" :speed="60" />
+        <Typing v-if="step >= 1" @done="step++" text= "Hi"  :speed="0.01" />
         <a
             v-if="step >= 2"
             class="mt-8 flex items-center text-lg text-gray-500 transition-all hover:text-gray-700"
-            href="https://github.com/"
+            href="https://github.com/blastJW/"
             target="_blank"
         >
             <MdiGithub class="mr-1 inline-block" />
